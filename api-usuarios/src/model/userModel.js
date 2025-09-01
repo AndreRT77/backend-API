@@ -15,7 +15,7 @@ const findById = (id) => {
     return users.find(user => user.id === id);
 }  
 // Função que adiciona um novo usuário
-const creat = (newUser) => {
+const createUser = (newUser) => {
     const newId = users.length > 0 ? users[users.length - 1].id + 1 : 1;
     const userWithId = {id: newId, ...newUser}
     users.push(userWithId);
@@ -26,5 +26,5 @@ const creat = (newUser) => {
 module.exports = {
     findAll,
     findById,
-    create
+    createUser
 }
